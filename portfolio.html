@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - FANOMEZANTSOA Jean Fidelis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Body avec fond image */
+        body {
+            background: url('image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #e0e0e0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            background-color: #121212; /* Couleur de secours */
+        }
+
+        /* Overlay pour rendre le texte lisible */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; color: #fff; }
+        header p { font-size: 1.3rem; color: #1db954; font-weight: bold; }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(18, 18, 18, 0.95);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+            z-index: 100;
+        }
+        nav a { 
+            font-weight: 600; 
+            font-size: 1rem; 
+            color: #ffffff; 
+            text-decoration: none; 
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #1db954; }
+
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1db954;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        /* About */
+        #about { text-align: center; }
+        #about img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #1db954;
+            margin-bottom: 25px;
+            transition: transform 0.3s;
+        }
+        #about img:hover { transform: scale(1.05); }
+        #about p { max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+        }
+        .skill {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .skill:hover {
+            transform: translateY(-5px);
+            background: #1db954;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .project {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(29, 185, 84, 0.4);
+            border-color: #1db954;
+        }
+        .project h3 { margin-bottom: 12px; color: #1db954; }
+
+        /* Contact */
+        #contact { text-align: center; }
+        #contact p { margin-bottom: 15px; font-size: 1.2rem; }
+        #contact a { color: #1db954; text-decoration: none; transition: 0.3s; }
+        #contact a:hover { text-decoration: underline; color: #1ed760; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #888;
+            background-color: #000;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media(max-width:600px){
+            header h1 { font-size: 2.2rem; }
+            nav { gap: 15px; font-size: 0.9rem; }
+            section { margin: 40px auto; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Jean Fidelis</h1>
+    <p>Développeur Web & Créateur Musical</p>
+</header>
+
+<nav>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <div>
+            <img src="fidelis.jpg" alt="FANOMEZANTSOA Jean Fidelis">
+        </div>
+        <p>Je suis <strong>FANOMEZANTSOA Jean Fidelis</strong>, passionné par le développement web et spécialisé en <strong>HTML/CSS</strong>. Je crée des sites modernes, performants et responsive pour offrir une expérience utilisateur exceptionnelle.</p>
+    </section>
+    <section id="about">
+    <h2>À propos de moi</h2>
+    <div style="text-align:center; margin-bottom:20px;">
+        <img src="fidelis.jpg" alt="FANOMEZANTSOA Jean Fidelis">
+    </div>
+    
+    <div class="bio-content">
+        <p>Je suis <strong>FANOMEZANTSOA Jean Fidelis</strong>, passionné par le développement web et spécialisé en <strong>HTML/CSS</strong>. Je crée des sites modernes, performants et responsive pour offrir une expérience utilisateur exceptionnelle.</p>
+        
+        <div class="personal-info">
+            <ul>
+                <li><strong>Date de naissance :</strong> 31 octobre 2005</li>
+                <li><strong>Lieu de naissance :</strong> Fianarantsoa</li>
+                <li><strong>Situation matrimoniale :</strong> Célibataire</li>
+                <li><strong>Nationalité :</strong> Malagasy</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Responsive Design</div>
+    </section>
+
+    <section id="projects">
+        <h2>Projets</h2>
+        <div class="projects">
+            <article class="project">
+                <h3>Portfolio Personnel</h3>
+                <p>Mon site vitrine responsive, réalisé avec des techniques modernes de CSS Grid et Flexbox.</p>
+            </article>
+            <article class="project">
+                <h3>Studio Musical</h3>
+                <p>Concept de plateforme pour mon futur studio de création musicale.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Me contacter</h2>
+        <p>Email : <a href="mailto:fanomfidelis@gmail.com">fanomfidelis@gmail.com</a></p>
+        <p>Téléphone : <a href="tel:+261347583864">+261 34 75 838 64</a></p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2026 FANOMEZANTSOA Jean Fidelis | Tous droits réservés
+</footer>
+
+</body>
+</html>
