@@ -5,166 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - FANOMEZANTSOA Jean Fidelis</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <style>
-        /* Reset global */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background: url('image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #e0e0e0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-            background-color: #121212;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0, 0, 0, 0.75);
-            z-index: -1;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 20px;
-        }
+        /* ... (Ton CSS existant reste le même jusqu'à la section contact) ... */
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background: url('image.jpg') no-repeat center center fixed; background-size: cover; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; background-color: #121212; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.75); z-index: -1; }
+        header { text-align: center; padding: 80px 20px; }
         header h1 { font-size: 3rem; margin-bottom: 10px; color: #fff; }
         header p { font-size: 1.3rem; color: #1db954; font-weight: bold; }
-
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(18, 18, 18, 0.95);
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px 0;
-            border-bottom: 1px solid #333;
-            z-index: 100;
-        }
-        nav a { 
-            font-weight: 600; 
-            color: #ffffff; 
-            text-decoration: none; 
-            transition: color 0.3s;
-        }
+        nav { position: sticky; top: 0; background-color: rgba(18, 18, 18, 0.95); display: flex; justify-content: center; gap: 30px; padding: 20px 0; border-bottom: 1px solid #333; z-index: 100; }
+        nav a { font-weight: 600; color: #ffffff; text-decoration: none; transition: color 0.3s; }
         nav a:hover { color: #1db954; }
-
-        section {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            margin-bottom: 30px;
-            border-bottom: 3px solid #1db954;
-            display: inline-block;
-            padding-bottom: 5px;
-            font-size: 1.8rem;
-            color: #fff;
-        }
-
-        /* About & Info Section */
+        section { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+        h2 { margin-bottom: 30px; border-bottom: 3px solid #1db954; display: inline-block; padding-bottom: 5px; font-size: 1.8rem; color: #fff; }
         #about { text-align: center; }
-        #about img {
-            width: 180px; height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #1db954;
-            margin-bottom: 20px;
-        }
-
-        .bio-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .personal-info {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #1db954;
-            text-align: left;
-            width: 100%;
-            max-width: 500px;
-        }
+        #about img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 4px solid #1db954; margin-bottom: 20px; }
+        .bio-content { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .personal-info { background-color: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 10px; border-left: 4px solid #1db954; text-align: left; width: 100%; max-width: 500px; }
         .personal-info ul { list-style: none; }
         .personal-info li { margin-bottom: 8px; }
         .personal-info strong { color: #1db954; }
-
-        /* Timeline / Parcours */
-        .timeline {
-            text-align: left;
-            width: 100%;
-            max-width: 500px;
-            margin-top: 10px;
-        }
-        .timeline-item {
-            padding-left: 20px;
-            border-left: 2px solid #333;
-            position: relative;
-            margin-bottom: 20px;
-        }
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: -7px; top: 5px;
-            width: 12px; height: 12px;
-            background: #1db954;
-            border-radius: 50%;
-        }
-
-        /* Skills */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 20px;
-        }
-        .skill {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            transition: 0.3s;
-        }
+        .timeline { text-align: left; width: 100%; max-width: 500px; margin-top: 10px; }
+        .timeline-item { padding-left: 20px; border-left: 2px solid #333; position: relative; margin-bottom: 20px; }
+        .timeline-item::after { content: ''; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; background: #1db954; border-radius: 50%; }
+        .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; }
+        .skill { background-color: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; text-align: center; transition: 0.3s; }
         .skill:hover { background: #1db954; color: #fff; transform: translateY(-5px); }
-
-        /* Projects */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .project {
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            padding: 25px;
-            border: 1px solid #333;
-            transition: 0.3s;
-        }
+        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .project { background-color: #1a1a1a; border-radius: 10px; padding: 25px; border: 1px solid #333; transition: 0.3s; }
         .project:hover { border-color: #1db954; transform: translateY(-5px); }
         .project h3 { color: #1db954; margin-bottom: 10px; }
 
-        footer {
-            text-align: center;
-            padding: 40px;
+        /* MODIFICATION : Style spécial pour les icônes de contact */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .contact-icons a {
+            color: #fff;
+            font-size: 2rem;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .contact-icons a:hover {
+            color: #1db954;
+            transform: scale(1.2);
+        }
+        .contact-icons span {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 8px;
             color: #888;
-            border-top: 1px solid #333;
+        }
+        .contact-item {
+            text-align: center;
         }
 
-        @media(max-width:600px){
-            header h1 { font-size: 2rem; }
-            nav { gap: 15px; font-size: 0.8rem; }
-        }
+        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #333; }
+        @media(max-width:600px){ header h1 { font-size: 2rem; } nav { gap: 15px; font-size: 0.8rem; } }
     </style>
 </head>
 <body>
@@ -187,7 +91,6 @@
         <div class="bio-content">
             <img src="fidelis.jpg" alt="FANOMEZANTSOA Jean Fidelis">
             <p>Passionné par le développement web en utilisant <strong>HTML/CSS</strong>, je crée des sites responsive.</p>
-            
             <div class="personal-info">
                 <ul>
                     <li><strong>Date de naissance :</strong> 31 octobre 2005</li>
@@ -196,17 +99,10 @@
                     <li><strong>Situation :</strong> Célibataire</li>
                 </ul>
             </div>
-
             <div class="timeline">
                 <h3>Mon Parcours</h3>
-                <div class="timeline-item">
-                    <strong>2026 - Présent</strong>
-                    <p>L1 en Informatique</p>
-                </div>
-                <div class="timeline-item">
-                    <strong>2025</strong>
-                    <p>Baccalauréat</p>
-                </div>
+                <div class="timeline-item"><strong>2026 - Présent</strong><p>L1 en Informatique</p></div>
+                <div class="timeline-item"><strong>2025</strong><p>Baccalauréat</p></div>
             </div>
         </div>
     </section>
@@ -217,35 +113,42 @@
             <div class="skill"><strong>HTML</strong></div>
             <div class="skill"><strong>CSS</strong></div>
             <div class="skill"><strong>Responsive Design</strong></div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projets</h2>
         <div class="projects">
-            <article class="project">
-                <h3>Portfolio Personnel</h3>
-                <p>Site vitrine réalisé avec CSS Grid et Flexbox.</p>
-            </article>
-            <article class="project">
-                <h3>Studio Musical</h3>
-                <p>Concept de plateforme pour mon futur studio de création.</p>
-            </article>
+            <article class="project"><h3>Portfolio Personnel</h3><p>Site vitrine réalisé avec CSS Grid et Flexbox.</p></article>
+            <article class="project"><h3>Studio Musical</h3><p>Concept de plateforme pour mon futur studio de création.</p></article>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" style="text-align: center;">
         <h2>Me contacter</h2>
-        <p>Email : <a href="mailto:fanomfidelis@gmail.com" style="color:#1db954; text-decoration:none;">fanomfidelis@gmail.com</a></p>
-        <p>Téléphone : <a href="tel:+261347583864" style="color:#1db954; text-decoration:none;">+261 34 75 838 64</a></p>
-        <p>FB : <a href="https://www.facebook.com/ntsoa.fidelis" style="color:#1db954; text-decoration:none;">Fanomezantsoa Fidelis</a></p>
-        <p>TikTok : <a href="https://vm.tiktok.com/ZS9eP7vFTc6oj-rL4qG/" style="color:#1db954; text-decoration:none;">ntsoafidelis05</a></p>
-
-
+        <div class="contact-icons">
+            <div class="contact-item">
+                <a href="mailto:fanomfidelis@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <span>Email</span>
+            </div>
+            <div class="contact-item">
+                <a href="tel:+261347583864" title="Téléphone"><i class="fas fa-phone"></i></a>
+                <span>Appel</span>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.facebook.com/ntsoa.fidelis" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <span>Facebook</span>
+            </div>
+            <div class="contact-item">
+                <a href="https://vm.tiktok.com/ZS9eP7vFTc6oj-rL4qG/" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <span>TikTok</span>
+            </div>
+        </div>
     </section>
 </main>
 
 <footer>
-    &copy;  FANOMEZANTSOA Jean Fidelis 
+    &copy; 2026 - FANOMEZANTSOA Jean Fidelis 
 </footer>
 
 </body>
